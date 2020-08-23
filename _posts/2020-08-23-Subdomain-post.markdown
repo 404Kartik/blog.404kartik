@@ -37,3 +37,50 @@ Make sure that your CNAME file is exactly like this
 
 Your site should now be live, hosted entirely on [GitHub Pages][3]!
 
+##Now you would like to deploy your website to the s3 bucket
+You need one of your s3 buckets configured for static web hosting for this deployment. Read my story on s3 static website deployment and configure one if you don’t have.
+
+Login to AWS console and go to CodePipeline.
+
+Important! Switch to the correct AWS region where your S3 website is created before creating the pipeline.
+
+Click the Create pipeline button.
+
+Give the pipeline a meaningful name: web-s3-deploy
+Select New service role. Give it a meaningful name: web-s3-pipeline-role
+Artifact store: Choose the Default location option
+Bucket: select the s3 bucket which the static website is hosted.
+Hit the Next button.
+
+Select the Source provider: Github.
+Click the Connect to Github button. Authenticate Authorize AWS CodePipeline to access your Github Repos.
+
+After authentication, select the Repository with your static website files. Select the branch of the repository. I’m using a static website noobcod.com for this tutorial.
+
+Select the Github webhooks (Recommended) option. Important! You need to be the owner or an admin of the repository to create webhooks.
+
+Hit the Next button.
+
+Hit Skip Build Stage button. You can use AWS Codebuild to compile typescript or any project that need to build before deploy. We skip this because the repo contains static website contents.
+
+Hit the Skip button on the prompt.
+
+Deploy provider: Select Amazon S3
+Bucket: Select the bucket which configured for the static website.
+Extract file before deploy: You must check this because code pipeline compresses the artifact.
+
+No additional configurations needed. Hit the Next button.
+
+You can go back and change configuration if you made any mistake at the Review step. Hit the Create Pipeline button.
+
+Go to your domain from the web browser. It’s now deployed.
+
+Make a change on the repository on Github.com website and hit Commit button. Ill change v1 to v2 to get a visible change.
+
+
+
+
+
+
+
+
