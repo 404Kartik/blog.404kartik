@@ -40,42 +40,46 @@ Your site should now be live, hosted entirely on [GitHub Pages][3]!
 ##Now you would like to deploy your website to the s3 bucket
 You need one of your s3 buckets configured for static web hosting for this deployment. Read my story on s3 static website deployment and configure one if you don’t have.
 
-Login to AWS console and go to CodePipeline.
+Automatically deploy changes made to the GitHub repository of the static website to AWS S3. The change you make will be instantly available on live website yourdomain.com.
 
-Important! Switch to the correct AWS region where your S3 website is created before creating the pipeline.
+You don't need to clone the git repository to make changes. You can do it from the github.com website itself. After configuring the pipeline, you don't need to login to AWS. Everything happens automatically under the hood. Aint it cool?
 
-Click the Create pipeline button.
+You need one of your s3 buckets configured for static web hosting for this deployment. Read my story on [s3 static website deployment][2] and configure one if you don't have.
 
-Give the pipeline a meaningful name: web-s3-deploy
-Select New service role. Give it a meaningful name: web-s3-pipeline-role
-Artifact store: Choose the Default location option
-Bucket: select the s3 bucket which the static website is hosted.
-Hit the Next button.
+Login to [AWS console][3] and go to [CodePipeline][4].
 
-Select the Source provider: Github.
-Click the Connect to Github button. Authenticate Authorize AWS CodePipeline to access your Github Repos.
+**Important**! Switch to the correct AWS region where your S3 website is created before creating the pipeline.
 
-After authentication, select the Repository with your static website files. Select the branch of the repository. I’m using a static website noobcod.com for this tutorial.
+Click the **Create pipeline **button.
 
-Select the Github webhooks (Recommended) option. Important! You need to be the owner or an admin of the repository to create webhooks.
+Give the **pipeline **a meaningful name: _web-s3-deploy_  
+Select **New service role**. Give it a meaningful name: _web-s3-pipeline-role  
+_Artifact store: Choose the **Default location** option  
+Bucket: select the s3 bucket which the **static website** is hosted.   
+Hit the **Next **button.
 
-Hit the Next button.
+Select the Source provider: **Github**.   
+Click the **Connect to Github **button. Authenticate Authorize AWS CodePipeline to access your Github Repos.
 
-Hit Skip Build Stage button. You can use AWS Codebuild to compile typescript or any project that need to build before deploy. We skip this because the repo contains static website contents.
+After authentication, select the Repository with your static website files. Select the branch of the repository. _I'm using a static website noobcod.com for this tutorial._
 
-Hit the Skip button on the prompt.
+Select the **Github webhooks (Recommended)** option. **Important!** You need to be the **owner **or an **admin **of the repository to create webhooks.
 
-Deploy provider: Select Amazon S3
-Bucket: Select the bucket which configured for the static website.
-Extract file before deploy: You must check this because code pipeline compresses the artifact.
+Hit the **Next** button.
 
-No additional configurations needed. Hit the Next button.
+Hit **Skip Build Stage **button. _You can use AWS Codebuild to compile typescript or any project that need to build before deploy. We skip this because the repo contains static website contents._
 
-You can go back and change configuration if you made any mistake at the Review step. Hit the Create Pipeline button.
+Hit the **Skip **button on the prompt.
 
-Go to your domain from the web browser. It’s now deployed.
+Deploy provider: Select **Amazon S3**  
+Bucket: Select the bucket which configured for the **static website**.   
+Extract file before deploy: You **must check **this because code pipeline compresses the artifact.
 
-Make a change on the repository on Github.com website and hit Commit button. Ill change v1 to v2 to get a visible change.
+No additional configurations needed. Hit the **Next **button.
+
+You can go back and change configuration if you made any mistake at the Review step. Hit the **Create Pipeline** button.
+
+Go to your domain from the web browser. It's now deployed.
 
 
 
