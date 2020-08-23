@@ -16,7 +16,7 @@ You have a domain hosted on Namecheap, and you want to point its DNS to your web
 2\. Scroll down to the **GitHub Pages **section.
 
 3\. Under **Custom domain**, add your domain.
-![A test image](assets/gh.png)
+![A test image](texture/assets/gh.png)
 
 4\. Login to your GoDaddy account. Navigate to **Manage Domains**.
 
