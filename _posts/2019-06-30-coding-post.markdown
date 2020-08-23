@@ -5,7 +5,10 @@ description: Hosting your sub-domain while retaining your brand
 date:   2020-08-23 21:03:36 +0530
 categories: Jekyll Github DNS
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+If you’re anything like me then you probably have one big Maximum Linux Hosting account with 100+ subdomains running all kinds of different websites.
+I love using GitHub Pages for static sites in particular because all it takes to get your site live and make updates is a quick ``git push`` command. In fact, I just uploaded my personal portfolio site to GitHub Pages last night and it took less than 5 minutes.
+
+You have a domain hosted on GoDaddy, and you want to point its DNS to your website hosted on GitHub.
 
 ```javascript
 const express = require('express')
