@@ -32,30 +32,8 @@ It should look like the following when you click Save (with your username, of co
 GitHub Pages should automatically create a matching CNAME file in the root of your repository that points to your desired domain. If not, create one.
 
 If you can't figure it out. Don't worry. It's not hard. Create a file in GitHub called CNAME and on the first line type in your desired custom domain. But you probably won't have to do this.
+Make sure that your CNAME file is exactly like this
+![image](CNAME.jpg)
 
 Your site should now be live, hosted entirely on [GitHub Pages][3]!
 
-
-```javascript
-const express = require('express')
-const app = express()
- 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
- 
-app.listen(3000)
-```
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam qui voluptatem excepturi nemo similique atque sapiente aperiam, dolorum deleniti! Esse quam perferendis temporibus nemo at molestias necessitatibus tenetur cupiditate sapiente. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et voluptatibus non labore officiis assumenda, distinctio perspiciatis blanditiis nesciunt rerum molestias impedit fugiat nulla qui libero minima quasi! Libero, iure.
-
-```scss
-body {
-	font-family: 'Nunito Sans', sans-serif;
-	line-height: 1.5em;
-	margin: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-```
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam rerum, ratione impedit necessitatibus facere soluta odio repellat asperiores neque! Sunt iusto quia suscipit amet inventore eum, vel molestiae reiciendis alias.
