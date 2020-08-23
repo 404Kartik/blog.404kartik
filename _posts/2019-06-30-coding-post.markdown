@@ -18,11 +18,12 @@ You have a domain hosted on Namecheap, and you want to point its DNS to your web
 3\. Under **Custom domain**, add your domain.
 ![A test image](gh.png)
 
-4\. Login to your GoDaddy account. Navigate to **Manage Domains**.
+4\. Login to your Namecheap account. Navigate to **Manage Domains**.
 
 5\. Scroll down to your desired domain, click through to the next page, then scroll down and select **Manage DNS**.
 
 6\. Once you're in, you will want to add a CNAME Record with the following values (where **Points to** is [YOUR USERNAME].github.io):
+![A test image](name.jpg)
 
 **WARNING:** If you already have a CNAME Record with **Host **set to **www **it won't let you create a new one. So either delete or modify the old one with the information above. You only want one at the end of the day.
 
