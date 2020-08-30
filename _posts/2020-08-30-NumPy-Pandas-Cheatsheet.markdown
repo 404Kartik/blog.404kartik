@@ -200,99 +200,14 @@ In [11]:
 
 Out[11]:
 
-Student ID
+**Student ID**|**Gender**|**Project Phase 1**|**Project Phase 2**|**Mid-Semester Test**|**Final Exam**|**Grade**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+25|126|Female|20.00|22.5|83|56.0
+36|137|Female|20.00|26.0|89|63.0
+29|130|Male|19.50|13.0|62|39.0
+22|123|Male|19.75|30.0|74|61.0
+28|129|Male|20.00|30.0|64|86.0
 
-Gender
-
-Project Phase 1
-
-Project Phase 2
-
-Mid-Semester Test
-
-Final Exam
-
-Grade
-
-25
-
-126
-
-Female
-
-20.00
-
-22.5
-
-83
-
-56.0
-
-PA
-
-36
-
-137
-
-Female
-
-20.00
-
-26.0
-
-89
-
-63.0
-
-PA
-
-29
-
-130
-
-Male
-
-19.50
-
-13.0
-
-62
-
-39.0
-
-NN
-
-22
-
-123
-
-Male
-
-19.75
-
-30.0
-
-74
-
-61.0
-
-PA
-
-28
-
-129
-
-Male
-
-20.00
-
-30.0
-
-64
-
-86.0
-
-PA
 
 ### Sorting[¶](https://www.featureranking.com/tutorials/python-tutorials/pandas/#Sorting) {#Sorting}
 
@@ -310,6 +225,71 @@ In [12]:
     grades.sort_values(by='Final Exam', ascending=False).head()
 
 Out[12]:
+**Student ID**|**Gender**|**Project Phase 1**|**Project Phase 2**|**Mid-Semester Test**|**Final Exam**|**Grade**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+27|128|Female|20.0|30.00|84|91.0
+28|129|Male|20.0|30.00|64|86.0
+26|127|Female|20.0|35.00|84|83.0
+14|115|Male|19.5|26.00|100|79.0
+13|114|Male|20.0|22.75|85|78.0
+
+The function `shape` counts the number of rows and columns. Thus, number
+of rows and columns can be obtained as `grade.shape[0]` and
+`grade.shape[1]` respectively.
+
+In [13]:
+
+    grades.shape
+
+Out[13]:
+
+    (40, 7)
+
+`info()` provides a concise summary of the columns.
+
+In [14]:
+
+    grades.info()
+
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 40 entries, 0 to 39
+    Data columns (total 7 columns):
+    Student ID           40 non-null int64
+    Gender               37 non-null object
+    Project Phase 1      40 non-null float64
+    Project Phase 2      37 non-null float64
+    Mid-Semester Test    40 non-null int64
+    Final Exam           36 non-null float64
+    Grade                40 non-null object
+    dtypes: float64(3), int64(2), object(2)
+    memory usage: 2.3+ KB
+
+`describe()` generates descriptive statistics. Keep in mind that this
+function excludes *null* values.
+
+In [15]:
+
+    grades.describe()
+
+Out[15]:
+Student ID	Project Phase 1	Project Phase 2	Mid-Semester Test	Final Exam
+count	40.000000	40.000000	37.000000	40.000000	36.000000
+mean	120.500000	16.987500	23.750000	72.100000	56.055556
+std	11.690452	5.964626	7.509716	19.664885	20.520296
+min	101.000000	0.000000	0.000000	26.000000	6.000000
+25%	110.750000	17.687500	20.000000	59.750000	45.500000
+50%	120.500000	19.500000	25.500000	76.000000	60.000000
+75%	130.250000	20.000000	30.000000	86.000000	71.750000
+max	140.000000	20.000000	35.000000	100.000000	91.000000
+
+#To ensure all the columns are listed (including categoricals), we can
+add the `include = all` parameter.
+
+In [16]:
+
+    grades.describe(include='all')
+
+Out[16]:
 
 Student ID
 
@@ -325,84 +305,178 @@ Final Exam
 
 Grade
 
-27
+count
 
-128
+40.000000
 
-Female
+37
 
-20.0
+40.000000
 
-30.00
+37.000000
 
-84
+40.000000
 
-91.0
+36.000000
 
-PA
+40
 
-28
+unique
 
-129
+NaN
 
-Male
+4
 
-20.0
+NaN
 
-30.00
+NaN
 
-64
+NaN
 
-86.0
+NaN
 
-PA
+2
 
-26
+top
 
-127
-
-Female
-
-20.0
-
-35.00
-
-84
-
-83.0
-
-PA
-
-14
-
-115
+NaN
 
 Male
 
-19.5
+NaN
 
-26.00
+NaN
 
-100
+NaN
 
-79.0
-
-PA
-
-13
-
-114
-
-Male
-
-20.0
-
-22.75
-
-85
-
-78.0
+NaN
 
 PA
 
+freq
 
+NaN
+
+22
+
+NaN
+
+NaN
+
+NaN
+
+NaN
+
+29
+
+mean
+
+120.500000
+
+NaN
+
+16.987500
+
+23.750000
+
+72.100000
+
+56.055556
+
+NaN
+
+std
+
+11.690452
+
+NaN
+
+5.964626
+
+7.509716
+
+19.664885
+
+20.520296
+
+NaN
+
+min
+
+101.000000
+
+NaN
+
+0.000000
+
+0.000000
+
+26.000000
+
+6.000000
+
+NaN
+
+25%
+
+110.750000
+
+NaN
+
+17.687500
+
+20.000000
+
+59.750000
+
+45.500000
+
+NaN
+
+50%
+
+120.500000
+
+NaN
+
+19.500000
+
+25.500000
+
+76.000000
+
+60.000000
+
+NaN
+
+75%
+
+130.250000
+
+NaN
+
+20.000000
+
+30.000000
+
+86.000000
+
+71.750000
+
+NaN
+
+max
+
+140.000000
+
+NaN
+
+20.000000
+
+35.000000
+
+100.000000
+
+91.000000
+
+NaN
