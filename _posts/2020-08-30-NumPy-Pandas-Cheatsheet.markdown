@@ -138,4 +138,89 @@ NSW
 A second alternative, which is a bit shorter, is to append rows as lists
 at the end of the data frame.
 
+In [6]:
+
+    df = pd.DataFrame(columns=['name', 'state', 'birthyear'])
+    df.loc[len(df)] = ['Mary', 'VIC', 1980]
+    df.loc[len(df)] = ['David', 'NSW', 1992]
+    # etc.
+    df
+
+Out[6]:
+
+name
+
+state
+
+birthyear
+
+0
+
+Mary
+
+VIC
+
+1980
+
+1
+
+David
+
+NSW
+
+1992
+
+This tutorial will mostly focus on data frames, since real-world
+datasets are generally multi-dimensional tables rather than just one
+dimensional arrays.
+
+Loading Data: Course Grades[¶](https://www.featureranking.com/tutorials/python-tutorials/pandas/#Loading-Data:-Course-Grades) {#Loading-Data:-Course-Grades}
+-----------------------------------------------------------------------------------------------------------------------------
+
+This sample data contains course assessment results and students' final
+grades (Pass or Fail) for a class with 40 students.
+
+-   `Student ID`: Unique ID number for each student in the data.
+
+-   `Gender`: The gender of student.
+
+-   `Project Phase 1`: The mark student received by completing the first
+    part of project. The marks are out of 20.
+
+-   `Project Phase 2`: The mark student received by completing the
+    second part of project. The marks are out of 30.
+
+-   `Mid-Semester Test`: The mark student received from the mid-semester
+    test. The marks are out of 100.
+
+-   `Final Exam`: The mark student received from the final exam. The
+    marks are out of 100.
+
+-   `Grade`: The grade student received indicating whether they passed
+    or failed.
+
+Now let's load the data into a DataFrame object from the Cloud.
+
+In [7]:
+
+    # for Mac OS users only!
+    # if you run into any SSL certification issues, 
+    # you may need to run the following command for a Mac OS installation.
+    # $/Applications/Python 3.x/Install Certificates.command
+    import os, ssl
+    if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
+        getattr(ssl, '_create_unverified_context', None)): 
+        ssl._create_default_https_context = ssl._create_unverified_context
+
+    import io, requests
+    grades_url = 'https://raw.githubusercontent.com/vaksakalli/python_tutorials/master/sample_grades.csv'
+    url_content = requests.get(grades_url).content
+    grades = pd.read_csv(io.StringIO(url_content.decode('utf-8')))
+
+    # alternatively, you can download this CSV file to 
+    # where this notebook is on your computer
+    # and then use the read_csv() method:
+    # ### grades = pd.read_csv('sample_grades.csv', header=0)
+
+
 
