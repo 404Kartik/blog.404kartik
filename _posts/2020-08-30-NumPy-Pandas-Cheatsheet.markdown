@@ -90,6 +90,7 @@ In [6]:
     df
 
 Out[6]:
+
 **name**|**state**|**birthyear**
 :-----:|:-----:|:-----:
 0|Mary|VIC
