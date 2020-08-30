@@ -54,13 +54,13 @@ In [4]:
 
 Out[4]:
 
-| name | state | birthyear | birthyear |   |
-|-----:|------:|----------:|----------:|---|
-|    0 |  Mary |       VIC |      1980 |   |
-|    1 | David |       NSW |      1992 |   |
-|    2 |  Jack |       VIC |      2000 |   |
-|    3 |  John |        SA |      1980 |   |
-|    4 | Robin |       QLD |      1995 |   |
+**name**|**state**|**birthyear**
+:-----:|:-----:|:-----:
+0|Mary|VIC
+1|David|NSW
+2|Jack|VIC
+3|John|SA
+4|Robin|QLD
 An alternative is to first define an empty data frame with column names
 and then append rows to it as dictionaries whose keys are the columns.
 
@@ -73,11 +73,10 @@ In [5]:
     df
 
 Out[5]:
-|   |  name | state | birthyear |   |
-|--:|------:|------:|----------:|---|
-| 0 |  Mary |   VIC |      1980 |   |
-| 1 | David |   NSW |      1992 |   |
-|   |       |       |           |   |
+**name**|**state**|**birthyear**
+:-----:|:-----:|:-----:
+0|Mary|VIC
+1|David|NSW
 
 A second alternative, which is a bit shorter, is to append rows as lists
 at the end of the data frame.
@@ -91,10 +90,10 @@ In [6]:
     df
 
 Out[6]:
-| name | state | birthyear |      |   |
-|-----:|------:|----------:|-----:|---|
-|    0 |  Mary |       VIC | 1980 |   |
-|    1 | David |       NSW | 1992 |   |
+**name**|**state**|**birthyear**
+:-----:|:-----:|:-----:
+0|Mary|VIC
+1|David|NSW
 
 This tutorial will mostly focus on data frames, since real-world
 datasets are generally multi-dimensional tables rather than just one
@@ -162,59 +161,19 @@ Out[8]:
 1|102|Female|17.75|30.0|79|62.0
 2|103|Male|0.00|0.0|78|15.0
 3|104|Male|20.00|25.0|69|65.0
-4|105|Male|18.75|30.0|96|51.0Alternatively, we can define the number of header rows we want to print.
+4|105|Male|18.75|30.0|96|51.0
+Alternatively, we can define the number of header rows we want to print.
 
 In [9]:
 
     grades.head(2)
 
 Out[9]:
+**Student ID**|**Gender**|**Project Phase 1**|**Project Phase 2**|**Mid-Semester Test**|**Final Exam**|**Grade**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+0|101|Male|18.25|15.5|94|61.0
+1|102|Female|17.75|30.0|79|62.0
 
-Student ID
-
-Gender
-
-Project Phase 1
-
-Project Phase 2
-
-Mid-Semester Test
-
-Final Exam
-
-Grade
-
-0
-
-101
-
-Male
-
-18.25
-
-15.5
-
-94
-
-61.0
-
-PA
-
-1
-
-102
-
-Female
-
-17.75
-
-30.0
-
-79
-
-62.0
-
-PA
 
 `tail()` prints the last five rows by default.
 
@@ -224,99 +183,13 @@ In [10]:
 
 Out[10]:
 
-Student ID
-
-Gender
-
-Project Phase 1
-
-Project Phase 2
-
-Mid-Semester Test
-
-Final Exam
-
-Grade
-
-35
-
-136
-
-Male
-
-18.50
-
-22.0
-
-26
-
-68.0
-
-PA
-
-36
-
-137
-
-Female
-
-20.00
-
-26.0
-
-89
-
-63.0
-
-PA
-
-37
-
-138
-
-Male
-
-18.75
-
-30.0
-
-59
-
-52.0
-
-PA
-
-38
-
-139
-
-Male
-
-19.00
-
-30.0
-
-70
-
-NaN
-
-PA
-
-39
-
-140
-
-Male
-
-20.00
-
-29.0
-
-84
-
-77.0
-
-PA
+**Student ID**|**Gender**|**Project Phase 1**|**Project Phase 2**|**Mid-Semester Test**|**Final Exam**|**Grade**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+35|136|Male|18.50|22.0|26|68.0
+36|137|Female|20.00|26.0|89|63.0
+37|138|Male|18.75|30.0|59|52.0
+38|139|Male|19.00|30.0|70|NaN
+39|140|Male|20.00|29.0|84|77.0
 
 `sample()` randomly selects rows from the entire data.
 
