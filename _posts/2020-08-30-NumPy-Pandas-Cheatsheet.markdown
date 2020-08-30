@@ -225,6 +225,7 @@ In [12]:
     grades.sort_values(by='Final Exam', ascending=False).head()
 
 Out[12]:
+
 **Student ID**|**Gender**|**Project Phase 1**|**Project Phase 2**|**Mid-Semester Test**|**Final Exam**|**Grade**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
 27|128|Female|20.0|30.00|84|91.0
@@ -272,6 +273,7 @@ In [15]:
     grades.describe()
 
 Out[15]:
+
 Student ID	Project Phase 1	Project Phase 2	Mid-Semester Test	Final Exam
 count	40.000000	40.000000	37.000000	40.000000	36.000000
 mean	120.500000	16.987500	23.750000	72.100000	56.055556
@@ -290,6 +292,7 @@ In [16]:
     grades.describe(include='all')
 
 Out[16]:
+
 **Student ID**|**Gender**|**Project Phase 1**|**Project Phase 2**|**Mid-Semester Test**|**Final Exam**|**Grade**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
 count|40.000000|37|40.000000|37.000000|40.000000|36.000000
