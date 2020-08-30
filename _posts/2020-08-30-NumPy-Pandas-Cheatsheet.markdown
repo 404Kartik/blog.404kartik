@@ -307,3 +307,157 @@ min|101.000000|NaN|0.000000|0.000000|26.000000|6.000000
 75%|130.250000|NaN|20.000000|30.000000|86.000000|71.750000
 max|140.000000|NaN|20.000000|35.000000|100.000000|91.000000
 
+
+We can also use the following functions to summarize the data. All these
+methods exclude null values by default.
+
+-   `count()` to count the number of elements.
+-   `value_counts()` to get a frequency distribution of unique values.
+-   `nunique()` to get the number of unique values.
+-   `mean()` to calculate the arithmetic mean of a given set of numbers.
+-   `std()` to calculate the sample standard deviation of a given set of
+    numbers.
+-   `max()` to return the maximum of the provided values.
+-   `min()` to return minimum of the provided values.
+
+In [17]:
+
+    grades.count()
+
+Out[17]:
+
+    Student ID           40
+    Gender               37
+    Project Phase 1      40
+    Project Phase 2      37
+    Mid-Semester Test    40
+    Final Exam           36
+    Grade                40
+    dtype: int64
+
+In [18]:
+
+    grades['Gender'].value_counts()
+
+Out[18]:
+
+    Male      22
+    Female    13
+    M          1
+    F          1
+    Name: Gender, dtype: int64
+
+In [19]:
+
+    grades['Gender'].nunique()
+
+Out[19]:
+
+    4
+
+In [20]:
+
+    grades['Final Exam'].mean()
+
+Out[20]:
+
+    56.05555555555556
+
+In [21]:
+
+    grades['Mid-Semester Test'].std()
+
+Out[21]:
+
+    19.66488475195551
+
+In [22]:
+
+    grades['Project Phase 2'].max()
+
+Out[22]:
+
+    35.0
+
+In [23]:
+
+    grades['Project Phase 1'].min()
+
+Out[23]:
+
+    0.0
+
+### Selecting specific columns[¶](https://www.featureranking.com/tutorials/python-tutorials/pandas/#Selecting-specific-columns) {#Selecting-specific-columns}
+
+When there are many columns, we may prefer to select only the ones we
+are interested in. Let's say we want to select the "Gender" and the
+"Grade" columns only.
+
+In [24]:
+
+    # notice the double brackets
+    grades[['Gender', 'Grade']].head()
+
+Out[24]:
+
+**Gender**|**Grade**
+:-----:|:-----:
+0|Male
+1|Female
+2|Male
+3|Male
+4|Male
+
+##We can also get a single column as a Series object from a data frame.
+
+In [25]:
+
+    # notice the single bracket
+    gender_series = grades['Gender']
+
+In [26]:
+
+    type(gender_series)
+
+Out[26]:
+
+    pandas.core.series.Series
+
+In [27]:
+
+    gender_series.head()
+
+Out[27]:
+
+    0      Male
+    1    Female
+    2      Male
+    3      Male
+    4      Male
+    Name: Gender, dtype: object
+
+### Filtering for particular values[¶](https://www.featureranking.com/tutorials/python-tutorials/pandas/#Filtering-for-particular-values) {#Filtering-for-particular-values}
+
+We can subset the data based on a particular criterion. Let's say we
+want the list of students who have failed this class.
+
+In [28]:
+
+    grades[grades['Grade'] == 'NN']
+
+Out[28]:
+
+**Student ID**|**Gender**|**Project Phase 1**|**Project Phase 2**|**Mid-Semester Test**|**Final Exam**|**Grade**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+2|103|Male|0.00|0.0|78|15.0
+8|109|M|18.00|23.0|50|33.0
+12|113|Female|0.00|NaN|67|NaN
+16|117|NaN|15.75|10.0|81|34.0
+17|118|Male|12.50|10.0|30|22.0
+18|119|Male|17.50|20.0|61|31.0
+21|122|Female|20.00|23.0|37|25.0
+29|130|Male|19.50|13.0|62|39.0
+30|131|Male|0.00|NaN|60|NaN
+31|132|Female|17.50|20.0|42|47.0
+34|135|Male|20.00|30.0|61|6.0
+
