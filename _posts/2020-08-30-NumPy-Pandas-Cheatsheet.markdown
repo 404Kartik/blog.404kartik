@@ -1,4 +1,10 @@
-
+---
+layout: post
+title:  "Learning NumPy and Pandas"
+description: NumPy and Pandas cheatsheet
+date:   2020-08-30 21:03:36 +0530
+categories: NumPy Pandas Python
+---
 
 
 Hello everyone! Today I want to write about the Pandas library (link to the website). Pandas stands for “Python Data Analysis Library”. According to the Wikipedia page on Pandas, “the name is derived from the term “panel data”, an econometrics term for multidimensional structured data sets.” But I think it’s just a cute name to a super-useful Python library!
