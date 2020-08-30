@@ -112,28 +112,11 @@ In [5]:
     df
 
 Out[5]:
-
-name
-
-state
-
-birthyear
-
-0
-
-Mary
-
-VIC
-
-1980
-
-1
-
-David
-
-NSW
-
-1992
+|   |  name | state | birthyear |   |
+|--:|------:|------:|----------:|---|
+| 0 |  Mary |   VIC |      1980 |   |
+| 1 | David |   NSW |      1992 |   |
+|   |       |       |           |   |
 
 A second alternative, which is a bit shorter, is to append rows as lists
 at the end of the data frame.
