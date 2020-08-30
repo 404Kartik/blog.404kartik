@@ -148,5 +148,387 @@ In [7]:
     # and then use the read_csv() method:
     # ### grades = pd.read_csv('sample_grades.csv', header=0)
 
+The method `head()` prints the first five rows by default.
+
+In [8]:
+
+    grades.head()
+
+Out[8]:
+
+**Student ID**|**Gender**|**Project Phase 1**|**Project Phase 2**|**Mid-Semester Test**|**Final Exam**|**Grade**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+0|101|Male|18.25|15.5|94|61.0
+1|102|Female|17.75|30.0|79|62.0
+2|103|Male|0.00|0.0|78|15.0
+3|104|Male|20.00|25.0|69|65.0
+4|105|Male|18.75|30.0|96|51.0Alternatively, we can define the number of header rows we want to print.
+
+In [9]:
+
+    grades.head(2)
+
+Out[9]:
+
+Student ID
+
+Gender
+
+Project Phase 1
+
+Project Phase 2
+
+Mid-Semester Test
+
+Final Exam
+
+Grade
+
+0
+
+101
+
+Male
+
+18.25
+
+15.5
+
+94
+
+61.0
+
+PA
+
+1
+
+102
+
+Female
+
+17.75
+
+30.0
+
+79
+
+62.0
+
+PA
+
+`tail()` prints the last five rows by default.
+
+In [10]:
+
+    grades.tail()
+
+Out[10]:
+
+Student ID
+
+Gender
+
+Project Phase 1
+
+Project Phase 2
+
+Mid-Semester Test
+
+Final Exam
+
+Grade
+
+35
+
+136
+
+Male
+
+18.50
+
+22.0
+
+26
+
+68.0
+
+PA
+
+36
+
+137
+
+Female
+
+20.00
+
+26.0
+
+89
+
+63.0
+
+PA
+
+37
+
+138
+
+Male
+
+18.75
+
+30.0
+
+59
+
+52.0
+
+PA
+
+38
+
+139
+
+Male
+
+19.00
+
+30.0
+
+70
+
+NaN
+
+PA
+
+39
+
+140
+
+Male
+
+20.00
+
+29.0
+
+84
+
+77.0
+
+PA
+
+`sample()` randomly selects rows from the entire data.
+
+In [11]:
+
+    grades.sample(5, random_state=99)
+
+Out[11]:
+
+Student ID
+
+Gender
+
+Project Phase 1
+
+Project Phase 2
+
+Mid-Semester Test
+
+Final Exam
+
+Grade
+
+25
+
+126
+
+Female
+
+20.00
+
+22.5
+
+83
+
+56.0
+
+PA
+
+36
+
+137
+
+Female
+
+20.00
+
+26.0
+
+89
+
+63.0
+
+PA
+
+29
+
+130
+
+Male
+
+19.50
+
+13.0
+
+62
+
+39.0
+
+NN
+
+22
+
+123
+
+Male
+
+19.75
+
+30.0
+
+74
+
+61.0
+
+PA
+
+28
+
+129
+
+Male
+
+20.00
+
+30.0
+
+64
+
+86.0
+
+PA
+
+### Sorting[¶](https://www.featureranking.com/tutorials/python-tutorials/pandas/#Sorting) {#Sorting}
+
+We can sort the data with respect to a particular column by calling
+`sort_values()`. Let's sort the data by Final Exam scores in descending
+order. If you want the sorting to be permanent, you must specifically
+set the `inplace` argument to `True`. This is a **fundamental rule** in
+Pandas: in most cases, if you don't set the `inplace` argument to
+`True`, you will need to set the output of the command to another
+variable to save its effect. Another nice feature of Pandas is **method
+chaining**: notice below how we chain two methods together.
+
+In [12]:
+
+    grades.sort_values(by='Final Exam', ascending=False).head()
+
+Out[12]:
+
+Student ID
+
+Gender
+
+Project Phase 1
+
+Project Phase 2
+
+Mid-Semester Test
+
+Final Exam
+
+Grade
+
+27
+
+128
+
+Female
+
+20.0
+
+30.00
+
+84
+
+91.0
+
+PA
+
+28
+
+129
+
+Male
+
+20.0
+
+30.00
+
+64
+
+86.0
+
+PA
+
+26
+
+127
+
+Female
+
+20.0
+
+35.00
+
+84
+
+83.0
+
+PA
+
+14
+
+115
+
+Male
+
+19.5
+
+26.00
+
+100
+
+79.0
+
+PA
+
+13
+
+114
+
+Male
+
+20.0
+
+22.75
+
+85
+
+78.0
+
+PA
 
 
