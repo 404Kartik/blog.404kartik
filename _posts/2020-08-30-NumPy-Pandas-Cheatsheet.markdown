@@ -54,52 +54,13 @@ In [4]:
 
 Out[4]:
 
-name
-
-state
-
-birthyear
-
-0
-
-Mary
-
-VIC
-
-1980
-
-1
-
-David
-
-NSW
-
-1992
-
-2
-
-Jack
-
-VIC
-
-2000
-
-3
-
-John
-
-SA
-
-1980
-
-4
-
-Robin
-
-QLD
-
-1995
-
+| name | state | birthyear | birthyear |   |
+|-----:|------:|----------:|----------:|---|
+|    0 |  Mary |       VIC |      1980 |   |
+|    1 | David |       NSW |      1992 |   |
+|    2 |  Jack |       VIC |      2000 |   |
+|    3 |  John |        SA |      1980 |   |
+|    4 | Robin |       QLD |      1995 |   |
 An alternative is to first define an empty data frame with column names
 and then append rows to it as dictionaries whose keys are the columns.
 
@@ -130,28 +91,10 @@ In [6]:
     df
 
 Out[6]:
-
-name
-
-state
-
-birthyear
-
-0
-
-Mary
-
-VIC
-
-1980
-
-1
-
-David
-
-NSW
-
-1992
+| name | state | birthyear |      |   |
+|-----:|------:|----------:|-----:|---|
+|    0 |  Mary |       VIC | 1980 |   |
+|    1 | David |       NSW | 1992 |   |
 
 This tutorial will mostly focus on data frames, since real-world
 datasets are generally multi-dimensional tables rather than just one
