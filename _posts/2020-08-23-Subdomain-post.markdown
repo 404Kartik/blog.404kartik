@@ -23,7 +23,7 @@ You have a domain hosted on Namecheap, and you want to point its DNS to your web
 5\. Scroll down to your desired domain, click through to the next page, then scroll down and select **Manage DNS**.
 
 6\. Once you're in, you will want to add a CNAME Record with the following values (where **Points to** is [YOUR USERNAME].github.io):
-![A test image](/assetsname.jpg)
+![A test image](/assets/name.jpg)
 
 **WARNING:** If you already have a CNAME Record with **Host **set to **www **it won't let you create a new one. So either delete or modify the old one with the information above. You only want one at the end of the day.
 
@@ -33,7 +33,7 @@ GitHub Pages should automatically create a matching CNAME file in the root of yo
 
 If you can't figure it out. Don't worry. It's not hard. Create a file in GitHub called CNAME and on the first line type in your desired custom domain. But you probably won't have to do this.
 Make sure that your CNAME file is exactly like this
-![image](/assetsCNAME.jpg)
+![image](/assets/CNAME.jpg)
 
 Your site should now be live, hosted entirely on [GitHub Pages][3]!
 
