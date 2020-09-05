@@ -20,7 +20,8 @@ Hi, I am a student at RMIT University I created this blog so that i can write an
 * Javasript
 
 ## Like the blog want to use it for your own?
-Just clone the repo and change the name in your  
+Just clone the repo and change the name in your  ''' config ''' file and post this blog.
+
 ## About me
 I am a student developer from Melbourne Australia.
 My major interests include developing different applications, Amazon Web Services and Cyber Security
