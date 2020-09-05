@@ -15,9 +15,12 @@ Hi, I am a student at RMIT University I created this blog so that i can write an
 ## What is this blog built on?
 * Jekyll
 * HTML
-** CSS
-** Ruby
-** Javasript
+* CSS
+* Ruby
+* Javasript
+
+## Like the blog want to use it for your own?
+Just clone the repo and change the name in your  
 ## About me
 I am a student developer from Melbourne Australia.
 My major interests include developing different applications, Amazon Web Services and Cyber Security
