@@ -13,8 +13,8 @@ This is a weekly tech blog from the life of a student who is currently on his jo
 Hi, I am a student at RMIT University I created this blog so that i can write and share about everything I expirience as a developer
 
 ## What is this blog built on?
-** Jekyll
-** HTML
+* Jekyll
+* HTML
 ** CSS
 ** Ruby
 ** Javasript
