@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Learning NumPy and Pandas"
+description: NumPy and Pandas cheatsheet
+date:   2020-08-30 21:03:36 +0530
+categories: ReactJs Web-Develoment 
+---
+
 ## Why use React ?
 
 As already mentioned in the introduction we now know that it is a javascript library to build beautiful user interfaces. React is also:
