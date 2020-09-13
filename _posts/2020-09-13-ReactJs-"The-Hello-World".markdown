@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Learning NumPy and Pandas"
-description: NumPy and Pandas cheatsheet
-date:   2020-08-30 21:03:36 +0530
+title:  "ReactJs "The Hello World"
+description: Getting started with ReactJs
+date:   2020-09-13 21:03:36 +0530
 categories: ReactJs Web-Develoment 
 ---
 
