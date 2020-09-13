@@ -85,3 +85,30 @@ You will also want to install the Node.js package manager. You can do this by us
     
     sudo apt-get install npm
     
+
+We're using this _ES6_ syntax to define our new _Greeter_ component, and it is an extension of the basic React component. (The reason we might choose to use this syntax over React's own component declaration method is purely aesthetic at this point of the tutorial, [_but there is a fundamental difference_][6].)
+
+We'll explore the full implication of this declaration in later parts of the tutorial, but essentially it means, '_Give me a named container for everything I want to do with my component_.' In the future, you might add functionality for say, connecting with a data source, or even reacting to changes in your app state (geddit now?!) For now, all we want to look it is outputting a piece of our UI:
+    
+    
+    render() {   
+    **return** 
+{**this**.props.greeting}
+  
+    }
+
+So far, so vanilla Javascript. Every React component must return something for React to _render, _or output, to the DOM (Ed: It's OK to return _null_.) And this is what our render method is doing: returning an _h1_ tag.
+
+But what is that? Between the curly brackets? The _h1 _tag contains what looks like non-HTML. That's part of the JSX syntax! In this case, the curly brackets are telling React to parse the Javascript inside the brackets and render them as the content inside the tag:
+    
+    
+    {**this**.props.greeting}
+
+We'll look at exactly what '_this_' means, and what '_props_' are in later parts, but what you should now is that '_props_' is short for '_properties_'. You can look at properties as pieces of data that are passed down from a parent component.
+
+JSX can do more than simply render passed data, though. As we go through the course, you'll see how we can express ourselves to achieve the nested nature of components, pass data and functions, and keep the turtles going all the way down.
+    
+    
+    ReactDOM.render(, document.getElementById('myReactApp'));
+
+Finally, the line that brings it all together, and you can see more JSX! _ReactDOM _is the Javascript library object that you import and use to tie your React app to the real DOM. Here we tell ReactDOM to '_render_' our new component and attach it to the root element which we can find using the standard Javascript DOM method '_document.getElementById_.'
