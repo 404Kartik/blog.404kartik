@@ -8,3 +8,19 @@ As already mentioned in the introduction we now know that it is a javascript lib
 
 ### Let's cut the chase and dive into real code examples
 
+## Hello World with React
+
+Now that you have a basic knowledge of the main concepts of React, it's time to see a concrete example. Let's start by creating a new `index.html` file containing the following code:
+    
+    
+    
+       
+          
+       
+       
+          http://www.google-analytics.com/ga.js"> src="">https://fb.me/react-0.12.2.js">
+          ">https://fb.me/JSXTransformer-0.12.2.js">
+          ">https://www.telerik.com/hello.jsx">
+          ">https://www.telerik.com/main.jsx">
+       
+    
