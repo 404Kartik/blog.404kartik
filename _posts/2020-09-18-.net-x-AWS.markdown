@@ -1,0 +1,71 @@
+
+# .net x Amazon Web Services 
+
+Amazon Web Services (AWS) is a member of the .NET Foundation and is a major proponent of .NET development and .NET developers.  AWS engineers are currently supporting several different .NET open source products with the support for those projects, and others, continuing to grow. 
+
+This support includes most modern .NET platforms, including the recently released version of .NET Core, v3.1.
+
+As its name implies, AWS provides a large set of online services ranging from infrastructure solutions such as virtual machines and container management to storage products to purpose-built or managed databases with many, many more. 
+
+
+## Architecture 
+Since these are all cloud-based administrations, all connection is done through API calls (for the most part RESTful). A designer can decide to interface legitimately with these APIs, anyway AWS perceives that this adds intricacy to a task thus gives language or system explicit programming improvement packs (SDK) that play out the entirety of this connection for the engineer. 
+
+The entirety of the AWS SDKs offer help for API lifecycle thought, for example, certification the executives, retries, information marshaling, and serialization; all of which spare time and exertion for a designer hoping to interface with AWS administrations and items. 
+
+One case of a system explicit SDK is the AWS Software Development Kit for .NET.
+
+## SDK for .net
+
+.NET Software Development Kit
+In November 2009, AWS released the initial AWS Software Development Kit for .NET (SDK).  The SDK gives .NET applications a framework that allows them easy access to AWS services. 
+
+AWS updates the .NET SDK daily, so it is a rare situation when AWS releases a new feature or service and the SDK is not updated that day.  The .NET SDK simplifies the use of AWS services by providing a set of libraries in a way that is consistent and familiar for .NET developers. 
+
+All assistance bundles rely upon a typical center library that does the marshaling, demand marking, and different errands to empower sending API solicitations to, and accepting reactions from, AWS. The administration explicit bundles just uncover the administration API and related model classes. The equivalent may occur on the off chance that you introduce a more significant level SDK. Figure 2, above, shows a bundle named AWS.Logger.Core. Introducing any of the other AWS.Logger bundles will likewise introduce the Core bundle. Note, this isn't correct over the entirety of the more significant level SDKs. 
+
+Surveying the bundle and .dlls will show that the .dll and the bundle have a similar name. Subsequently, adding the AWSSDK.S3 bundle to a task will bring about adding AWSSDK.S3.dll to the \bin index. One thing to note, nonetheless, is that while the namespace is like the bundle and .dll name, they are not indistinguishable. While the .dll name is AWSSDK.S3.dll, as Figure 4 shows, the namespace utilized while getting to that usefulness is Amazon.S3.
+
+## Example running in an ASP.NET MVC web application that synchronously saves a file to S3
+
+'''
+using Amazon;
+using Amazon.S3;
+using Amazon.S3.Model;
+
+public async Task<string> SaveAsync(string path)
+{   
+    try
+    {
+        string fileName = "NDC-Booth.jpg";
+        string filePath = Path.Combine(path, fileName);
+        RegionEndpoint bucketRegion = RegionEndpoint.USWest2;
+
+        var putRequest = new PutObjectRequest
+        {
+            BucketName = "infoq-article-bucket",
+            Key = fileName,
+            ContentType = "image/jpeg",
+            FilePath = filePath
+        };
+
+        putRequest.Metadata.Add("x-amz-meta-title", "2020 AWS Booth at NDC London");
+
+        using (IAmazonS3 client = new AmazonS3Client(bucketRegion))
+        {
+    var results = await client.PutObjectAsync(putRequest).ConfigureAwait(false);
+           return results.ETag;            
+        }
+    }
+    catch (AmazonS3Exception e)
+    {
+        logger.Error("Amazon error saving to S3", e);
+    }
+    catch (Exception e)
+    {
+        logger.Error("Unknown error saving to S3", e);
+    }
+    return null;
+}     
+
+'''
