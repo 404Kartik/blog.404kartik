@@ -71,7 +71,6 @@ public async Task<string> SaveAsync(string path)
 This straightforward model duplicates a picture from the nearby web index and places it in S3. By utilizing the SDK, you don't need to stress over overseeing validation, confirmation, or retries, and it just works. What's more, while this model uses an offbeat strategy, a coordinated rendition that doesn't restore a Task is additionally accessible for those situations where a simultaneous methodology would be more fitting. All things considered, your simultaneous strategy would look more like:
 
 '''
-
 public string Save(string path)
 {
 …
