@@ -6,7 +6,7 @@ date:   2020-09-13 21:03:36 +0530
 categories: ReactJs Web-Develoment 
 ---
 
-## Why use React ?
+# Why use React ?
 
 As already mentioned in the introduction we now know that it is a javascript library to build beautiful user interfaces. React is also:
 
@@ -36,29 +36,18 @@ The code below is our `hello.jsx` component:
     
     var Hello = React.createClass({
        render: function() {
-          return 
-Hello, world!
-
-;
-       }
-    });
+          return Hello, world!;       }    });
 
 In the above snippet, we've created a new React component by passing an object literal to the `React.createClass()` method, which implements the Factory pattern. The result of invoking this method is stored in a variable named `Hello`. Inside the object literal, we define a property called `render` which has a function as its value.
 
 As I mentioned, `render()` is responsible for creating the objects that display the HTML code resulting from the component. However, instead of using a statement like `console.log()`, `alert()` or `document.write()`, we return the content to display. Here we're returning a paragraph with "Hello, world!".
 
 
-Hello, {this.props.name}
-;
-      }
-    }
+Hello, {this.props.name};      }    }
     
     
     function Welcome(props) {
-      return 
-Hello, {props.name}
-;
-    }
+      return Hello, {props.name};    }
 
 ## State
 
@@ -100,9 +89,7 @@ We'll explore the full implication of this declaration in later parts of the tut
     
     
     render() {   
-    **return** 
-{**this**.props.greeting}
-  
+    **return**{**this**.props.greeting}  
     }
 
 So far, so vanilla Javascript. Every React component must return something for React to _render, _or output, to the DOM (Ed: It's OK to return _null_.) And this is what our render method is doing: returning an _h1_ tag.
