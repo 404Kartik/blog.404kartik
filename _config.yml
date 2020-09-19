@@ -2,7 +2,7 @@ title: Kartiks Mega site
 author: Kartik Kumar
 email: k.kumar4354@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  This is my blog and I lik eggs
+  This is my blog.
 show_excerpts: true # set to true to show excerpts on the homepage
 baseurl: /
 
