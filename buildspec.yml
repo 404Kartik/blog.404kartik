@@ -1,0 +1,12 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - gem install bundler
+      - bundle install
+  build:
+    commands:
+      - bundle exec jekyll build
+      - aws s3 sync --delete _site/ s3://blog.404kartik.me
+      - aws cloudfront create-invalidation --distribution-id E2ZGF9V2Q9SOQD --paths '/*'
