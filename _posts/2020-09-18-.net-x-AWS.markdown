@@ -1,3 +1,10 @@
+---
+layout: post
+title:  ".net x Amazon Web Services"
+description: This blog post focusses on using .net to build applications with the help of AWS
+date:   2020-09-13 21:03:36 +0530
+categories: .net AWS
+---
 
 # .net x Amazon Web Services 
 
