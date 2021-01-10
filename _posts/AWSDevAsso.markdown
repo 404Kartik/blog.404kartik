@@ -8,6 +8,7 @@ categories: AWS Serverless Developer Cloud
 #### If you are planning to get into cloud, getting your hands on a AWS recognized certificate can be really helpful with your job search or your personal learning curve.
 
 ![A test image](/assets/Capture.JPG)
+![AnImage](/assets/WhatsApp Image 2021-01-01 at 5.59.27 PM.jpeg)
 
  I would like to share my experience on how I passed the Developer Associate Exam. I studied for about 1 month. I score 927/1000.
 
