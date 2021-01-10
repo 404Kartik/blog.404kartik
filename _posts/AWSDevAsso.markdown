@@ -5,7 +5,8 @@ description: How to prepare for AWS Developer Associate exam
 date:   2021-01-10 21:03:36 +0530
 categories: AWS Serverless Developer Cloud
 ---
-If you are planning to get into cloud, getting your hands on a AWS recognized certificate can be really helpful with your job search or your personal learning curve.
+#### If you are planning to get into cloud, getting your hands on a AWS recognized certificate can be really helpful with your job search or your personal learning curve.
+
 ![A test image](/assets/Capture.JPG)
 
 * I would like to share my experience on how I passed the Developer Associate Exam. I studied for about 1 month. I score 927/1000.
