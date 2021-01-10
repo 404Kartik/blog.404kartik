@@ -21,23 +21,23 @@ The second training material I used. I like his approach and the way he explaine
 
 ## Topics to Focus on:
 1. Lambda
-2\. AWS SAM
-3\. Kinesis
-4\. KMS
-5\. Data Pipeline
-6\. Cloud Formation
-7\. Code Deploy
-8\. DynamoDB
-9\. EC2 Instances
-10\. ECS
-11\. Cognito
-12\. SQS
-13\. API calls
-14\. API Gateway
-15\. Cloudfront
-16\. IAM roles and users
-17\. Elastic Beanstalk
-18\. X-ray
+2. AWS SAM
+3. Kinesis
+4. KMS
+5. Data Pipeline
+6. Cloud Formation
+7. Code Deploy
+8. DynamoDB
+9. EC2 Instances
+10. ECS
+11. Cognito
+12. SQS
+13. API calls
+14. API Gateway
+15. Cloudfront
+16. IAM roles and users
+17. Elastic Beanstalk
+18. X-ray
 
 ## My Advice:
 * Stay clear of dumps, instead use AWS practice tests 
@@ -48,6 +48,18 @@ The second training material I used. I like his approach and the way he explaine
 * On the exam make sure to double check your answers before you submit it. Do not rush.
 * Focus and use as many serverless offerings as possible.
 * Go thru FAQ’s and Cheat Sheets of each AWS services applicable to the Developer Associate course
+
+## Extra Things which helped me:
+* Being involved with the AWS Community around me. As programmers being involved in communities is really important for a constant learning. I was involved in a lot of with a lot of communities around me in Melbourne like
+1. [DevCop Melbourne](https://www.meetup.com/DevCoP-Melbourne/)
+2. [AWS Programming and Tools](https://www.meetup.com/Melbourne-AWS-Programming-and-Tools-Meetup/)
+* Organized a workshop, on 16th of November I developed, documented and delivered an AWS workshop to 160 Students pan university.
+* I started my cloud journey by giving and passing the AWS Cloud Practioner exam, which really helped to clear my basic concepts
+
+## Developer Associate vs Solutions Architect
+If you have experience with traditional IT functions such as networking, security, server management, Linux or Windows administration, your background will help you understand how these services work.  In this case, the solutions architect exam would be a better place to start as your experience will help you understand how cloud environments operate, which is one of the key topics in the exam.  
+
+On the other hand, if you have experience with scripting, programming or performing QA activities, the developer associate exam is the better choice for you. While preparing for this exam, you will learn about the developer tools that AWS offers — and build confidence in building using AWS.
 
 ## Additional Helpful Resources:
 -   [AWS FAQ's](https://aws.amazon.com/faqs/)
