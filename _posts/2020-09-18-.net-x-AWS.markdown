@@ -5,6 +5,7 @@ description: This blog post focusses on using .net to build applications with th
 date:   2020-09-13 21:03:36 +0530
 categories: .net AWS
 ---
+This blog will focus on how you can use AWS services to deploy a .net based application
 
 # .net x Amazon Web Services 
 
