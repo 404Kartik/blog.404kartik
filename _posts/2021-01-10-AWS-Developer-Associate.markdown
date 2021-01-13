@@ -19,7 +19,7 @@ categories: AWS Serverless Developer Cloud
 This course is one of the main training courses I used for my review. The instructors have a good understanding of the topics and the best part about acloudguru is that they have summaries at the end of every lecture and a summary of every section at the end of the section 
 The course is good and consists of 25 hours of video lectures with a few interactive labs.
 
-<a href="https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/" target=_blank">Stephane Maarek</a>
+<a href="https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/" target="_blank">Stephane Maarek</a>
 
 The second training material I used. I like his approach and the way he explained the lesson. He provided the basic understanding of the AWS services. An excellent training course.
 
