@@ -13,13 +13,14 @@ categories: AWS Serverless Developer Cloud
  I would like to share my experience on how I passed the Developer Associate Exam. I studied for about 1 month. I score 927/1000.
 
 ## The material courses that helped me in my Journey to get my first Associate Certification are as follows:
-<a href="http://example.com/" target="_blank">example</a>
-[Acloudguru](https://www.udemy.com/course/aws-certified-developer-associate/){:target="_blank"}
+
+<a href="https://www.udemy.com/course/aws-certified-developer-associate/" target="_blank">Acloudguru</a>
 
 This course is one of the main training courses I used for my review. The instructors have a good understanding of the topics and the best part about acloudguru is that they have summaries at the end of every lecture and a summary of every section at the end of the section 
 The course is good and consists of 25 hours of video lectures with a few interactive labs.
 
-[Stephane Maarek](https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/){:target="_blank"}
+<a href="https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/" target=_blank">Stephane Maarek</a>
+
 The second training material I used. I like his approach and the way he explained the lesson. He provided the basic understanding of the AWS services. An excellent training course.
 
 ## Topics to Focus on:
@@ -54,8 +55,8 @@ The second training material I used. I like his approach and the way he explaine
 
 ## Extra Things which helped me:
 * Being involved with the AWS Community around me. As programmers being involved in communities is really important for a constant learning. I was involved in a lot of with a lot of communities around me in Melbourne like
-1. [DevCop Melbourne](https://www.meetup.com/DevCoP-Melbourne/){:target="_blank"}
-2. [AWS Programming and Tools](https://www.meetup.com/Melbourne-AWS-Programming-and-Tools-Meetup/){:target="_blank"}
+1. <a href="https://www.meetup.com/DevCoP-Melbourne/" target="_blank">DevCop Melbourne</a>
+2. <a href="https://www.meetup.com/Melbourne-AWS-Programming-and-Tools-Meetup/" target="_blank">AWS Programming and Tools</a>
 * Organized a workshop, on 16th of November I developed, documented and delivered an AWS workshop to 160 Students pan university.
 * I started my cloud journey by giving and passing the AWS Cloud Practioner exam, which really helped to clear my basic concepts
 
@@ -65,9 +66,9 @@ If you have experience with traditional IT functions such as networking, securit
 On the other hand, if you have experience with scripting, programming or performing QA activities, the developer associate exam is the better choice for you. While preparing for this exam, you will learn about the developer tools that AWS offers — and build confidence in building using AWS.
 
 ## Additional Helpful Resources:
--   [AWS FAQ's](https://aws.amazon.com/faqs/){:target="_blank"}
--   [Tutorials Dojo AWS Cheat Sheets](https://tutorialsdojo.com/aws-cheat-sheets/){:target="_blank"}
--   [AWS Study Path Notes for Developer Associate](https://tutorialsdojo.com/aws-certified-developer-associate/){:target="_blank"}
+-   <a href="https://aws.amazon.com/faqs/" target="_blank">AWS FAQ's</a>
+-   <a href="https://tutorialsdojo.com/aws-cheat-sheets/" target="_blank">Tutorials Dojo AWS Cheat Sheets</a>
+-   <a href="https://tutorialsdojo.com/aws-certified-developer-associate/" target="_blank">AWS Study Path Notes for Developer Associate</a>
 -   <https://docs.aws.amazon.com/xray/latest/devguide/xray-api-segmentdocuments.html>{:target="_blank"}
 -   <https://docs.aws.amazon.com/streams/latest/dev/kinesis-record-processor-scaling.html>{:target="_blank"}
 -   <https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html#GSI.ThroughputConsiderations>{:target="_blank"}
