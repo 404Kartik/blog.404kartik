@@ -13,7 +13,7 @@ categories: AWS Serverless Developer Cloud
  I would like to share my experience on how I passed the Developer Associate Exam. I studied for about 1 month. I score 927/1000.
 
 ## The material courses that helped me in my Journey to get my first Associate Certification are as follows:
-
+<a href="http://example.com/" target="_blank">example</a>
 [Acloudguru](https://www.udemy.com/course/aws-certified-developer-associate/){:target="_blank"}
 
 This course is one of the main training courses I used for my review. The instructors have a good understanding of the topics and the best part about acloudguru is that they have summaries at the end of every lecture and a summary of every section at the end of the section 
