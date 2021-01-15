@@ -30,3 +30,6 @@ Documenting this workshop was a challenge in itself as not only this was to be d
 So I used Hugo ( a static website generator ) to document the process and had to do my own workshop atleast 30 times before I had it fully documented.
 #### Link to documentation : tinyurl.com/awsxrmitlab
 
+### Organizing
+Now that everything on my part was ready, it was time to bring people together and decide upon a date to deliver this venture.
+
