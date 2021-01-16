@@ -45,10 +45,10 @@ He escalated my request to the Associate Dean of the school of Computer Science 
 ##  
 This incident gave the registerations a real boost. It was just a matter of days we had 320 registerations, which implied almost a 150 student turn up. ( Fun fact : 160 students turned up )
 
-#### My general take
+### My general take
 I will go into details on all these topics, just wanted to put my general thoughts into words about all these aspects about the event I organized. In the next few blogs I aim to put light on some of these topics individually.
 My take about this event was that if you are ready to take initiative then things come together automatically for you. You just have to start the engine, put your thoughts into Driving gear fueled by your actions and you get a smooth drive all along.
-####
+## 
 Don't hesitate to reach out to me
 Have a nice weekend!
 
