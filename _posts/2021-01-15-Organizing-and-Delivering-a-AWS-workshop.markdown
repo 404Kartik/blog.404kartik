@@ -13,6 +13,7 @@ In September I helped my peers organize a workshop in Monash University and Univ
 ### What I developed?
 I began brainstorming ideas, I knew that I always wanted to build something which involves AI and Machine Learning to make it really interesting. 
 One of the challenges while building this thing were that not only it has to work properly and be good, it also has to be something appealing to someone new to it. Even a Finance major should be able to find it fascinating.
+![A test image](/assets/architecture.png)
 ###
 So I began work, 
 I used AWS Cognito, Elasticsearch, Appsync, Graphql, S3, Amplify and Rekognition to develop a full stack AI powered web-application which uses : 
