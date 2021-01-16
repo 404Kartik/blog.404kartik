@@ -32,4 +32,22 @@ So I used Hugo ( a static website generator ) to document the process and had to
 
 ### Organizing
 Now that everything on my part was ready, it was time to bring people together and decide upon a date to deliver this venture.
+Bringing everyone together is probably on of the hardest things as everyone has their schedule and everyone works full-time. So getting everyone on-board was a challenge in itself.
+For this I had to create slides and documents which made everyone understand the process in an easy way.
+
+### Marketting
+People attending your event makes your event what it is, in my expirience I spent more time marketting this event than any other thing. I won't say it is the hardest part of organizing but it is definetly the most time consuming part of it.
+I contacted my university clubs to send out emails about the event and suddenly we had lots of students registering. But even after having 100 registerations because the golden rule of event turn ups is that only 40% of the people of who register show up to a free event. This applied here as well. My aim was to get 150 students attending the workshop. Which was not impossible but was a challenge for sure.
+####
+I did have a back up plan for this, one of my university professor ( prof. Fabio ) has always been really helpful to me. I contacted him for help explaining what the event was about and what we as a team plan to get out of it. One of the things that he appreciated was the we had a clear agenda, of what we want to do. This was not a marketting campaign for AWS. This was a workshop presented by a university student himself.
+He escalated my request to the Associate Dean of the school of Computer Science and IT and they agreed to send out emails to every single student in the faculty who is studying anything remotely to IT.
+#### 
+This incident gave the registerations a real boost. It was just a matter of days we had 320 registerations, which implied almost a 150 student turn up. ( Fun fact : 160 students turned up )
+
+#### My general take
+I will go into details on all these topics, just wanted to put my general thoughts into words about all these aspects about the event I organized. In the next few blogs I aim to put light on some of these topics individually.
+My take about this event was that if you are ready to take initiative then things come together automatically for you. You just have to start the engine, put your thoughts into Driving gear fueled by your actions and you get a smooth drive all along.
+####
+Don't hesitate to reach out to me
+Have a nice weekend!
 
