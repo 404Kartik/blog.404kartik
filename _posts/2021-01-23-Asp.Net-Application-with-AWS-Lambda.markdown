@@ -204,3 +204,5 @@ The last bit I want to demonstrate is how to deploy the project to Lambda.
 Right click on the project in the Solution Explorer, and select the Publish to AWS Lambda… option <br>
 The Publish AWS Serverless Application dialog will be displayed. Complete the required information, and deploy the project. <br>
 Once the project has been deployed, the URL for your serverless app will be displayed in the AWS Serverless URL field.
+
+#### Feel free to reach out to me :D
