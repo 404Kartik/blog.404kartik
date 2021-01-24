@@ -1,0 +1,206 @@
+---
+layout: post
+title:  "Creating serverless application with .Net, Web Apis and AWS Lambda"
+description: In this blog we talk about creating a basic shopping list application
+date:   2021-01-230 21:03:36 +0530
+categories: AWS Serverless .Net WebApis Lambda
+---
+This application is going to be a basic application based on Asp.Net using webapis to develop a shopping list application which Post, Get and Deletes the items in the shopping list dictionary.
+
+## Creating a Serverless Application with ASP.NET Core. AWS Lambda and Web Apis
+
+### Overview of the application
+The purpose of this blog is to use Web Apis and AWS Lambda to deploy a serverless application. 
+Tools required :
+* AWS Account
+* AWS Toolkit for Visual Studio 
+* Visual Studio
+* Postman ( not mandatory )
+
+Recommended : 
+* Having a past knowledge on how to use AWS Lambda
+* Knowledge of AWS Toolkit for Visual Studio
+
+### Create the project
+Before creating the application, ensure you have downloaded and installed the Preview of the AWS Toolkit for Visual Studio 2017.
+
+Inside Visual Studio, create a new project and select the AWS Serverless Application (.NET Core) template:
+
+[![new project dialog](https://www.jerriepelser.com/static/eb64b944991746d7bbc98f6666906499/024d6/new-project-dialog.png "new project dialog")](https://www.jerriepelser.com/static/eb64b944991746d7bbc98f6666906499/024d6/new-project-dialog.png)
+
+Next select the ASP.NET Core Web API blueprint:
+
+[![new aws serverless application](https://www.jerriepelser.com/static/8044ceedabed1fb51c28c9ab503cf171/ad12c/new-aws-serverless-application.png "new aws serverless application")](https://www.jerriepelser.com/static/8044ceedabed1fb51c28c9ab503cf171/ad12c/new-aws-serverless-application.png)
+
+
+### Some cleanup first
+------------------
+
+The project created from the template will contain a lot of extra stuff which is not needed in for this application, most notably `ValuesController` and `S3ProxyController` classes in the `Controllers` folder. Go ahead and delete the files for those classes.
+
+It will also add some unneeded entries in the `serverless.template` file. Get rid of all of the entries related to S3, after which you should be left with a file that looks like the following:
+
+```
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Transform" : "AWS::Serverless-2016-10-31",
+  "Description" : "An AWS Serverless Application that uses the ASP.NET Core framework running in Amazon Lambda.",
+  "Parameters" : {
+  },
+  "Conditions" : {
+  },
+  "Resources" : {
+    "Get" : {
+      "Type" : "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "TimeZoneService::TimeZoneService.LambdaEntryPoint::FunctionHandlerAsync",
+        "Runtime": "dotnetcore1.0",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 60,
+        "Role": null,
+        "Policies": [ "AWSLambdaFullAccess" ],
+        "Environment" : {
+          "Variables" : {
+          }
+        },
+        "Events": {
+          "PutResource": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/{proxy+}",
+              "Method": "ANY"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Outputs" : {
+  }
+}
+```
+
+### Structure and Code
+
+#### Shopping List Controller
+This class is a controller hence goes inside the Controller folder ( which will be pre-created when you initialize the project )
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace LambdaShoppingListWebApi.Controllers
+{
+    [Route("v1/shoppingList")]
+    [ApiController]
+    public class ShoppingListController : Controller
+    {
+        private readonly Services.IShoppingListService _shoppingListService;
+
+        public ShoppingListController(Services.IShoppingListService shoppingListService)
+        {
+            _shoppingListService = shoppingListService;
+        }
+
+        [HttpGet]
+        public IActionResult GetShoppingList()
+        {
+            var result = _shoppingListService.GetItemsFromShoppingList();
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public IActionResult AddItemToShoppingList([FromBody] Model.ShoppingListModel shoppingList)
+        {
+            _shoppingListService.AddItemsToShoppingList(shoppingList);
+            return Ok();
+        }
+        [HttpDelete]
+        public IActionResult DeleteItemsFromShoppingList([FromBody] Model.ShoppingListModel shoppingList)
+        {
+            _shoppingListService.RemoveItem(shoppingList.Name);
+            return Ok();
+        }
+
+    }
+}
+```
+#### Shopping List Service
+* Create a new folder inside Controller called "Service"
+* All the services / functional classes go in here
+``` 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace LambdaShoppingListWebApi.Controllers.Services
+{
+    public class ShoppingListService : IShoppingListService
+    {
+        private readonly Dictionary<string, int> _shoppingListStorage = new Dictionary<string, int>();
+        public Dictionary<string, int> GetItemsFromShoppingList()
+        {
+            return _shoppingListStorage;
+        }
+        public void AddItemsToShoppingList(Model.ShoppingListModel shoppingList)
+        {
+            _shoppingListStorage.Add(shoppingList.Name, shoppingList.Quantity);
+
+        }
+        public void RemoveItem(string shoppingListName)
+        {
+            _shoppingListStorage.Remove(shoppingListName);
+        }
+
+        Dictionary<string, int> IShoppingListService.GetItemsFromShoppingList()
+        {
+            throw new NotImplementedException();
+        }
+
+      
+    }
+    
+}
+```
+#### Interface for Shopping List Service
+```
+using System.Collections.Generic;
+
+namespace LambdaShoppingListWebApi.Controllers.Services
+{
+    public interface IShoppingListService
+    {
+        Dictionary<string, int> GetItemsFromShoppingList();
+        void AddItemsToShoppingList(Model.ShoppingListModel shoppingList);
+    }
+}
+```
+#### Shopping List Model
+* Following the rules of MVCs we have created a folder inside the Controller called "Model"
+* We create a class inside Model called "Shopping List Model"
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace LambdaShoppingListWebApi.Controllers.Model
+{
+    public class ShoppingListModel
+    {
+        public string Name { get; set; }
+        public int Quantity { get; set; }
+    }
+}
+```
+### Deploying to AWS
+The last bit I want to demonstrate is how to deploy the project to Lambda.
+
+Right click on the project in the Solution Explorer, and select the Publish to AWS Lambda… option <br>
+The Publish AWS Serverless Application dialog will be displayed. Complete the required information, and deploy the project. <br>
+Once the project has been deployed, the URL for your serverless app will be displayed in the AWS Serverless URL field.
