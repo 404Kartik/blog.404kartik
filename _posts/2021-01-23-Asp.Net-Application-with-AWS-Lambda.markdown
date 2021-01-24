@@ -2,7 +2,7 @@
 layout: post
 title:  "Creating serverless application with .Net, Web Apis and AWS Lambda"
 description: In this blog we talk about creating a basic shopping list application
-date:   2021-01-230 21:03:36 +0530
+date:   2021-01-23 21:03:36 +0530
 categories: AWS Serverless .Net WebApis Lambda
 ---
 This application is going to be a basic application based on Asp.Net using webapis to develop a shopping list application which Post, Get and Deletes the items in the shopping list dictionary.
