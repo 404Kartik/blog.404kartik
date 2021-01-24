@@ -129,9 +129,11 @@ namespace LambdaShoppingListWebApi.Controllers
     }
 }
 ```
-#### Shopping List Service
+
+### Shopping List Service
 * Create a new folder inside Controller called "Service"
 * All the services / functional classes go in here
+
 ``` 
 using System;
 using System.Collections.Generic;
@@ -166,8 +168,10 @@ namespace LambdaShoppingListWebApi.Controllers.Services
     }
     
 }
+
 ```
-#### Interface for Shopping List Service
+### Interface for Shopping List Service
+
 ```
 using System.Collections.Generic;
 
@@ -179,10 +183,12 @@ namespace LambdaShoppingListWebApi.Controllers.Services
         void AddItemsToShoppingList(Model.ShoppingListModel shoppingList);
     }
 }
+
 ```
-#### Shopping List Model
+### Shopping List Model
 * Following the rules of MVCs we have created a folder inside the Controller called "Model"
 * We create a class inside Model called "Shopping List Model"
+
 ```
 using System;
 using System.Collections.Generic;
@@ -198,6 +204,7 @@ namespace LambdaShoppingListWebApi.Controllers.Model
     }
 }
 ```
+
 ### Deploying to AWS
 The last bit I want to demonstrate is how to deploy the project to Lambda.
 
