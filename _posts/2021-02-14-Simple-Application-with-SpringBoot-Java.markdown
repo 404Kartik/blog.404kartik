@@ -2,7 +2,7 @@
 layout: post
 title:  "Building a Simple Spring Boot application with Java"
 description: In this blog we talk about creating basic RESTful methods for our application
-date:   2021-02-14 21:03:36 +0530
+date:   2021-02-14 09:03:36 +0530
 categories: Java SpringBoot RESFTful
 ---
 
