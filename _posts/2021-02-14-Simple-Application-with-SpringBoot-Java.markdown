@@ -64,10 +64,13 @@ Alternatively these steps can be done on the spring boot website as well, go to 
 - Download your project as a zip file
 - Unzip the file
 - Open the file as a Maven project in your IDE 
+
+
 ### Setting up the project online
 - Setting up the project is quite easy from Spring Boot website
 - Your setup should look something like this
-<br>
+
+
 ![A test imagdce](/assets/dependancies.JPG)
 ![A test imaewwefge](/assets/project.JPG)
 
