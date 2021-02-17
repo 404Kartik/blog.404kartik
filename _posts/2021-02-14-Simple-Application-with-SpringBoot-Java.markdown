@@ -19,11 +19,14 @@ Add spring-boot-starter-parent project to the parent element in pom.xml:
     <version>2.1.1.RELEASE</version>
 </parent>
 ```
+
+
 In the Dependency section, we have to add the following dependency also in pom.xml
 ```
 <dependency>
    <groupId>org.springframework.boot</groupId>
-   <artifactId>spring-boot-starter-web</artifactId>
+   <artifactId>spring-boot-
+   .er-web</artifactId>
 </dependency>
 <dependency>
    <groupId>org.springframework.boot</groupId>
@@ -61,6 +64,11 @@ Alternatively these steps can be done on the spring boot website as well, go to 
 - Download your project as a zip file
 - Unzip the file
 - Open the file as a Maven project in your IDE 
+### Setting up the project online
+- Setting up the project is quite easy from Spring Boot website
+- Your setup should look something like this
+![A test image](/assets/dependancies.JPG)
+![A test image](/assets/project.JPG)
 
 ### Making a User.java file
 This file will contain the information about our user and its attributes
