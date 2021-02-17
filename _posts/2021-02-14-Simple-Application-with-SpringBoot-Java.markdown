@@ -9,8 +9,6 @@ categories: Java SpringBoot RESFTful
 Today I want to talk about craeting a super simple application with Spring boot and latest version of Java.
 We will learn how to create a basic application with a GET, POST, PUT & DELETE methods in it.
 If you are new to the Spring Framework, this might be a good start for you
-![A test imagdce](/assets/dependancies.JPG)
-![A test imaewwefge](/assets/project.JPG)
 
 ### How Can We Set up a Spring Boot Application with Maven?
 First, we have to add the spring-boot-starter-parent project or package in a maven project and declare dependencies that are needed for run Spring Boot application. There are steps need to do for setup the spring boot project in maven application
@@ -69,6 +67,7 @@ Alternatively these steps can be done on the spring boot website as well, go to 
 ### Setting up the project online
 - Setting up the project is quite easy from Spring Boot website
 - Your setup should look something like this
+<br>
 ![A test imagdce](/assets/dependancies.JPG)
 ![A test imaewwefge](/assets/project.JPG)
 
