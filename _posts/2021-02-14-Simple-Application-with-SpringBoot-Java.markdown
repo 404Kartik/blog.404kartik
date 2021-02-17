@@ -67,8 +67,8 @@ Alternatively these steps can be done on the spring boot website as well, go to 
 ### Setting up the project online
 - Setting up the project is quite easy from Spring Boot website
 - Your setup should look something like this
-![A test image](/assets/dependancies.JPG)
-![A test image](/assets/project.JPG)
+![A test imagdce](/assets/dependancies.JPG)
+![A test imaewwefge](/assets/project.JPG)
 
 ### Making a User.java file
 This file will contain the information about our user and its attributes
