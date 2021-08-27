@@ -1,10 +1,22 @@
----
+<!-- ---
 layout: post
 title:  "Building a Simple Spring Boot application with Java"
 description: In this blog we talk about creating basic RESTful methods for our application
 date:   2021-02-14 09:03:36 +0530
 categories: Java SpringBoot RESFTful
 ---
+ -->
+
+---
+layout: post
+title:  "Creating serverless application with .Net, Web Apis and AWS Lambda"
+description: In this blog we talk about creating a basic shopping list application
+date:   2021-01-23 21:03:36 +0530
+categories: AWS Serverless .Net WebApis Lambda
+---
+This application is going to be a basic application based on Asp.Net using webapis to develop a shopping list application which Post, Get and Deletes the items in the shopping list dictionary.
+
+
 
 Today I want to talk about craeting a super simple application with Spring boot and latest version of Java.
 We will learn how to create a basic application with a GET, POST, PUT & DELETE methods in it.
